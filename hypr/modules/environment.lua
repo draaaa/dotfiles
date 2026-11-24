@@ -62,3 +62,9 @@ hl.window_rule({  -- hyprland-run windowrule
     move  = "20 monitor_h-120",
     float = true
 })
+
+hl.window_rule({  -- ignore apps asking to be maximized, doesn't ignore media fullscreen
+    name           = "suppress-maximize-events",
+    match          = { class = ".*" },
+    suppress_event = "maximize"
+})
